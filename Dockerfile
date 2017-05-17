@@ -18,8 +18,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php-zip \
 	php-soap \
 	php-xdebug \
-	ssmtp
-	
+	ssmtp \
+	wkhtmltopdf \
+	xvfb \
+	php-gmp	
+
 COPY site.conf /etc/apache2/sites-enabled/000-default.conf
 COPY apache2-foreground /usr/local/bin/apache2-foreground
 	
